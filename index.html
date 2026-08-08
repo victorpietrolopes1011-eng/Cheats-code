@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="theme-color" content="#0b0b0d">
+
+    <title>GTA 5 CHEATS HUB</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="background">
+        <div class="city-grid"></div>
+        <div class="red-glow glow-one"></div>
+        <div class="red-glow glow-two"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="brand">
+            <div class="brand-icon">G5</div>
+
+            <div>
+                <h1>GTA 5</h1>
+                <span>CHEATS HUB</span>
+            </div>
+        </div>
+
+        <nav class="desktop-nav">
+            <button data-scroll="home">Início</button>
+            <button data-scroll="cheats">Códigos</button>
+            <button data-scroll="settings">Configurações</button>
+        </nav>
+
+        <button id="menuButton" class="menu-button">
+            ☰
+        </button>
+
+    </header>
+
+    <!-- MOBILE MENU -->
+    <aside id="mobileMenu" class="mobile-menu">
+
+        <button data-scroll="home">
+            🏠 Início
+        </button>
+
+        <button data-scroll="cheats">
+            🎮 Códigos
+        </button>
+
+        <button data-scroll="settings">
+            ⚙️ Configurações
+        </button>
+
+        <a href="#admin">
+            🛠️ Admin local
+        </a>
+
+    </aside>
+
+
+    <!-- HERO -->
+    <main id="home">
+
+        <section class="hero">
+
+            <div class="hero-badge">
+                ● STORY MODE • PLAYSTATION
+            </div>
+
+            <h2>
+                GTA 5
+                <strong>CHEATS HUB</strong>
+            </h2>
+
+            <p>
+                Consulte rapidamente códigos de trapaça do GTA V
+                e encontre o que precisa em segundos.
+            </p>
+
+            <div class="warning">
+                ⚠️ Os cheats são destinados ao Modo História.
+                A ativação pode desativar troféus/conquistas durante
+                a sessão atual.
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH -->
+        <section class="search-area">
+
+            <div class="search-box">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    id="searchInput"
+                    type="search"
+                    autocomplete="off"
+                    placeholder="Pesquisar código..."
+                >
+
+                <button id="clearSearch">
+                    ×
+                </button>
+
+            </div>
+
+            <div class="stats">
+
+                <div>
+                    <strong id="codeCounter">0</strong>
+                    <span>códigos</span>
+                </div>
+
+                <div>
+                    <strong id="favoriteCounter">0</strong>
+                    <span>favoritos</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FILTERS -->
+        <section class="filters-section">
+
+            <div class="filter-scroll">
+
+                <button class="filter active" data-filter="all">
+                    Todos
+                </button>
+
+                <button class="filter" data-filter="vehicles">
+                    🚗 Veículos
+                </button>
+
+                <button class="filter" data-filter="character">
+                    🧍 Personagem
+                </button>
+
+                <button class="filter" data-filter="police">
+                    🚔 Polícia
+                </button>
+
+                <button class="filter" data-filter="world">
+                    🌎 Mundo
+                </button>
+
+                <button class="filter" data-filter="other">
+                    ✈️ Outros
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHEATS -->
+        <section id="cheats" class="cheats-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">
+                        DATABASE
+                    </span>
+
+                    <h3>
+                        Códigos disponíveis
+                    </h3>
+                </div>
+
+                <button id="favoritesOnly">
+                    ⭐ Favoritos
+                </button>
+
+            </div>
+
+
+            <div id="cheatGrid" class="cheat-grid">
+                <!-- JS -->
+            </div>
+
+
+            <div id="emptyState" class="empty-state hidden">
+
+                <div class="empty-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    Nenhum código encontrado
+                </h3>
+
+                <p>
+                    Tente pesquisar outro nome ou categoria.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SETTINGS -->
+        <section id="settings" class="settings-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">
+                        PERSONALIZAÇÃO
+                    </span>
+
+                    <h3>
+                        Configurações
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <div class="settings-grid">
+
+                <div class="setting-card">
+
+                    <div>
+                        <strong>🌙 Aparência</strong>
+                        <small>
+                            Alternar entre tema escuro e claro.
+                        </small>
+                    </div>
+
+                    <button id="themeButton" class="setting-action">
+                        Tema
+                    </button>
+
+                </div>
+
+
+                <div class="setting-card">
+
+                    <div>
+                        <strong>🔊 Sons</strong>
+                        <small>
+                            Sons dos botões da interface.
+                        </small>
+                    </div>
+
+                    <label class="switch">
+                        <input id="soundToggle" type="checkbox">
+                        <span></span>
+                    </label>
+
+                </div>
+
+
+                <div class="setting-card">
+
+                    <div>
+                        <strong>✨ Animações</strong>
+                        <small>
+                            Ativar ou desativar animações.
+                        </small>
+                    </div>
+
+                    <label class="switch">
+                        <input id="animationToggle"
+                               type="checkbox"
+                               checked>
+                        <span></span>
+                    </label>
+
+                </div>
+
+
+                <div class="setting-card">
+
+                    <div>
+                        <strong>⭐ Favoritos</strong>
+                        <small>
+                            Apagar todos os favoritos salvos.
+                        </small>
+                    </div>
+
+                    <button id="clearFavorites"
+                            class="danger-button">
+                        Limpar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ADMIN -->
+        <section id="admin" class="admin-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">
+                        LOCAL ONLY
+                    </span>
+
+                    <h3>
+                        🛠️ Admin local
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="admin-notice">
+
+                <strong>⚠️ Demonstração local</strong>
+
+                <p>
+                    Esta área não possui autenticação nem banco de dados.
+                    Os códigos personalizados ficam apenas no localStorage
+                    deste navegador.
+                </p>
+
+            </div>
+
+
+            <form id="adminForm" class="admin-form">
+
+                <input
+                    id="adminId"
+                    type="hidden"
+                >
+
+                <div class="form-group">
+
+                    <label>
+                        Nome
+                    </label>
+
+                    <input
+                        id="adminName"
+                        required
+                        placeholder="Ex.: Meu código"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Descrição
+                    </label>
+
+                    <textarea
+                        id="adminDescription"
+                        required
+                        placeholder="Descrição do cheat"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Código de telefone
+                    </label>
+
+                    <input
+                        id="adminPhone"
+                        placeholder="1-999-000-0000"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Categoria
+                    </label>
+
+                    <select id="adminCategory">
+
+                        <option value="vehicles">
+                            🚗 Veículos
+                        </option>
+
+                        <option value="character">
+                            🧍 Personagem
+                        </option>
+
+                        <option value="police">
+                            🚔 Polícia
+                        </option>
+
+                        <option value="world">
+                            🌎 Mundo
+                        </option>
+
+                        <option value="other">
+                            ✈️ Outros
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="admin-actions">
+
+                    <button type="submit"
+                            class="primary-button">
+                        💾 Salvar código
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelEdit"
+                        class="secondary-button hidden">
+                        Cancelar
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <div id="adminList" class="admin-list">
+                <!-- JS -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-content">
+
+            <button id="closeModal"
+                    class="close-modal">
+                ×
+            </button>
+
+            <div id="modalIcon"
+                 class="modal-icon">
+                🎮
+            </div>
+
+            <span id="modalCategory"
+                  class="modal-category">
+                Categoria
+            </span>
+
+            <h2 id="modalTitle">
+                Cheat
+            </h2>
+
+            <p id="modalDescription">
+                Descrição
+            </p>
+
+
+            <div class="modal-code">
+
+                <span>
+                    CÓDIGO
+                </span>
+
+                <strong id="modalPhone">
+                    1-999-000-0000
+                </strong>
+
+                <button id="modalCopy">
+                    COPIAR
+                </button>
+
+            </div>
+
+
+            <div class="instructions">
+
+                <h4>
+                    📱 Como usar
+                </h4>
+
+                <ol>
+                    <li>
+                        Abra o celular do personagem.
+                    </li>
+
+                    <li>
+                        Entre em Contatos.
+                    </li>
+
+                    <li>
+                        Abra o teclado numérico.
+                    </li>
+
+                    <li>
+                        Digite o número mostrado acima.
+                    </li>
+
+                    <li>
+                        Pressione para realizar a chamada.
+                    </li>
+                </ol>
+
+            </div>
+
+            <div class="modal-platform">
+                🎮 PlayStation 4 / PlayStation 5
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div id="toast" class="toast">
+        Código copiado!
+    </div>
+
+
+    <footer>
+
+        <div class="footer-brand">
+            GTA 5 CHEATS HUB
+        </div>
+
+        <p>
+            Projeto independente de comunidade.
+            Não afiliado à Rockstar Games.
+        </p>
+
+        <small>
+            © 2026 GTA 5 CHEATS HUB
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
